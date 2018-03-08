@@ -23,8 +23,8 @@ public class ResultMessageBuilderTest {
         carList.add(testCar3);
     }
 
-    private void fillPos(Car car, int startGoNum){
-        for(int i=startGoNum; i<10; i++){
+    private void fillPos(Car car, int startGoNum) {
+        for (int i = startGoNum; i < 10; i++) {
             car.run(i);
         }
     }

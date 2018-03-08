@@ -1,4 +1,4 @@
-public class Car implements Comparable<Car>{
+public class Car implements Comparable<Car> {
     private String name;
     private int carPos;
 
@@ -7,13 +7,13 @@ public class Car implements Comparable<Car>{
         this.carPos = 0;
     }
 
-    public void run(int goNum){
-        if(canRun(goNum)) {
+    public void run(int goNum) {
+        if (canRun(goNum)) {
             this.carPos++;
         }
     }
 
-    private boolean canRun(int goNum){
+    private boolean canRun(int goNum) {
         return goNum >= 4;
     }
 
