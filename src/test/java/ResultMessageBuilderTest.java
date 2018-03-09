@@ -36,7 +36,7 @@ public class ResultMessageBuilderTest {
 
     @Test
     public void 위너찾기() {
-        int winnerRecord = ResultMessageBuilder.getWinnerRecord(carList);
+        int winnerRecord = ResultMessageBuilder.getMaxPosition(carList);
         assertEquals(new Car[]{testCar1, testCar3}, ResultMessageBuilder.searchWinners(carList));
     }
 
@@ -48,7 +48,7 @@ public class ResultMessageBuilderTest {
 
     @Test
     public void 위너의위치찾기() {
-        assertEquals(6, ResultMessageBuilder.getWinnerRecord(carList));
+        assertEquals(6, ResultMessageBuilder.getMaxPosition(carList));
     }
 
     @Test
