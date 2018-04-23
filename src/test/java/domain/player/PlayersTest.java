@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
+import static domain.player.Players.isDuplicateName;
 import static domain.player.Players.isValidPlayerNum;
 import static java.util.Collections.emptyList;
 import static org.junit.Assert.assertFalse;
@@ -19,5 +20,10 @@ public class PlayersTest {
     @Test
     public void valid_player_num() {
         assertTrue(isValidPlayerNum(Arrays.asList(new PlayerName("jinbro"), new PlayerName("colin"), new PlayerName("jinhyung"))));
+    }
+
+    @Test
+    public void duplicate_name() {
+        assertTrue(isDuplicateName(Arrays.asList(new PlayerName("jinbro"), new PlayerName("jinbro"), new PlayerName("jinbro"))));
     }
 }

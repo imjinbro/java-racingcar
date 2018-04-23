@@ -1,6 +1,9 @@
 package domain.player;
 
+import domain.result.RacingResult;
+
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class Players {
@@ -17,10 +20,32 @@ public class Players {
         return names.size() > 0;
     }
 
+    static boolean isDuplicateName(List<PlayerName> names) {
+        return new HashSet<>(names).size() != names.size();
+    }
+
     private void addPlayer(List<PlayerName> names) {
         for (PlayerName name : names) {
             players.add(new Player(name));
         }
+    }
+
+    public void move(int amount) throws IllegalArgumentException {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("1회 이상은 달려야합니다.");
+        }
+
+        for (Player player : players) {
+            player.move(amount);
+        }
+    }
+
+    public RacingResult getResults() {
+        RacingResult results = new RacingResult();
+        for (Player player : players) {
+            player.addResult(results);
+        }
+        return results;
     }
 
     /* 최고의 플레이어 구하기 */

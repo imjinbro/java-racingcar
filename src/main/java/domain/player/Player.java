@@ -14,13 +14,13 @@ public class Player {
         car = new Car();
     }
 
-    public void move(int amount) throws IllegalArgumentException {
+    public void move(int amount) {
         for (int i = 0; i < amount; i++) {
             car.move(generateRandomValue());
         }
     }
 
     public void addResult(RacingResult results) {
-        results.add(car.getResult());
+        results.add(name.getName(), car.getResult());
     }
 }

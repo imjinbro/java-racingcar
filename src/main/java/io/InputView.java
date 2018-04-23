@@ -17,6 +17,7 @@ public class InputView {
         try {
             return new Players(makePlayerNames(parseNames(scanner.nextLine())));
         } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
             return getPlayers();
         }
     }
