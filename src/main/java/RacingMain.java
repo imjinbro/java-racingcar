@@ -1,4 +1,5 @@
 import domain.player.Players;
+import io.OutputView;
 
 import static io.InputView.getPlayAmount;
 import static io.InputView.getPlayers;

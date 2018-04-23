@@ -1,7 +1,6 @@
 package domain.car;
 
 import domain.result.CarResult;
-import domain.result.RacingResult;
 
 class Position {
     private int position = 0;
