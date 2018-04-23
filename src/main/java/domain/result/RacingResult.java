@@ -1,14 +1,12 @@
 package domain.result;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.ArrayList;
 
 public class RacingResult {
-    private HashMap<String, CarResult> results = new HashMap<>();
+    private ArrayList<CarResult> results = new ArrayList<>();
 
-    public void add(String name, CarResult result) {
-        results.put(name, result);
+    public void add(CarResult result) {
+        results.add(result);
     }
 
     public String makeViewMessage() {
@@ -17,12 +15,10 @@ public class RacingResult {
 
     private String makeBoardMessage() {
         StringBuilder builder = new StringBuilder();
-        Set<Map.Entry<String, CarResult>> resultSet = results.entrySet();
-        for (Map.Entry<String, CarResult> result : resultSet) {
-            builder.append(result.getKey());
+        for (CarResult result : results) {
+            builder.append(result.getName());
             builder.append(" : ");
-            builder.append(result.getValue().get());
-            builder.append("\n");
+            builder.append(result.getPositionMessage());
         }
         return builder.toString();
     }

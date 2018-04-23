@@ -9,7 +9,7 @@ public class Car {
         return pos.move(value);
     }
 
-    public CarResult getResult() {
-        return pos.getResult();
+    public CarResult getResult(String name) {
+        return pos.getResult(name);
     }
 }

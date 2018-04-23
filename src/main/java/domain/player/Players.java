@@ -47,6 +47,4 @@ public class Players {
         }
         return results;
     }
-
-    /* 최고의 플레이어 구하기 */
 }

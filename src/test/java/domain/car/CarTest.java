@@ -25,7 +25,7 @@ public class CarTest {
         car.move(5);
         car.move(1);
         car.move(6);
-        CarResult result = car.getResult();
-        assertEquals("--", result.get());
+        CarResult result = car.getResult("jinbro");
+        assertEquals("--", result.getPositionMessage());
     }
 }

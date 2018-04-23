@@ -21,6 +21,6 @@ public class Player {
     }
 
     public void addResult(RacingResult results) {
-        results.add(name.getName(), car.getResult());
+        results.add(car.getResult(name.getName()));
     }
 }
