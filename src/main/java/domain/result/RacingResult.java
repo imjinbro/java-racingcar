@@ -8,4 +8,13 @@ public class RacingResult {
     public void add(CarResult result) {
         results.add(result);
     }
+
+    public String makeViewMessage() {
+        StringBuilder builder = new StringBuilder();
+        for (CarResult result : results) {
+            builder.append(result.get());
+            builder.append("\n");
+        }
+        return builder.toString();
+    }
 }
