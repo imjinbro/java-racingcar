@@ -1,4 +1,4 @@
-package domain.car;
+package domain.player;
 
 import java.util.Random;
 

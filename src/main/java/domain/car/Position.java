@@ -1,6 +1,7 @@
 package domain.car;
 
 import domain.result.CarResult;
+import domain.result.RacingResult;
 
 class Position {
     private int position = 0;
@@ -12,7 +13,7 @@ class Position {
         return position;
     }
 
-    CarResult getResult() {
+    public CarResult getResult() {
         return new CarResult(position);
     }
 }
