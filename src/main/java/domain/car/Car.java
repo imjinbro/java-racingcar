@@ -10,6 +10,6 @@ public class Car {
     }
 
     public CarResult getResult() {
-        return new CarResult(pos.getPosition());
+        return pos.getResult();
     }
 }
