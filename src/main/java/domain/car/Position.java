@@ -4,9 +4,10 @@ import domain.result.CarResult;
 
 class Position {
     private int position = 0;
+    private MoveStrategy strategy = new UpperFourMove();
 
     int move(int value) {
-        if (value >= 4) {
+        if (strategy.isMove(value)) {
             position++;
         }
         return position;

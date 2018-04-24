@@ -23,8 +23,8 @@ public class CarResult implements Comparable<CarResult> {
         return builder.toString();
     }
 
-    public boolean isMatchPosition(int position) {
-        return this.position == position;
+    public boolean isMatchMaxPosition(int maxPosition) {
+        return position == maxPosition;
     }
 
     @Override

@@ -13,6 +13,10 @@ public class Players {
         if (!isValidPlayerNum(names)) {
             throw new IllegalArgumentException("1명 이상은 플레이 해야합니다.");
         }
+
+        if (isDuplicateName(names)) {
+            throw new IllegalArgumentException("중복된 이름이 존재합니다.");
+        }
         addPlayer(names);
     }
 

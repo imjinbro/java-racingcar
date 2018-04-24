@@ -10,7 +10,6 @@ public class RacingResult {
 
     public void add(CarResult result) {
         results.add(result);
-        Collections.sort(results);
     }
 
     public String getBoardMessage() {
@@ -25,7 +24,8 @@ public class RacingResult {
     }
 
     public String getWinnerMessage() {
+        Collections.sort(results);
         int maxPosition = results.getFirst().getPosition();
-        return results.stream().filter(result -> result.isMatchPosition(maxPosition)).map(CarResult::getName).collect(joining(", "));
+        return results.stream().filter(result -> result.isMatchMaxPosition(maxPosition)).map(CarResult::getName).collect(joining(", "));
     }
 }
