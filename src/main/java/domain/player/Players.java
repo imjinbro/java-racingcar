@@ -22,7 +22,7 @@ public class Players {
     }
 
     static boolean isValidPlayerNum(List<PlayerName> names) {
-        return names.size() > MIN_PLAYER_NUM;
+        return names.size() >= MIN_PLAYER_NUM;
     }
 
     static boolean isDuplicateName(List<PlayerName> names) {
