@@ -7,11 +7,12 @@ import java.util.HashSet;
 import java.util.List;
 
 public class Players {
+    private static final int MIN_PLAYER_NUM = 2;
     private ArrayList<Player> players = new ArrayList<>();
 
     public Players(List<PlayerName> names) throws IllegalArgumentException {
         if (!isValidPlayerNum(names)) {
-            throw new IllegalArgumentException("1명 이상은 플레이 해야합니다.");
+            throw new IllegalArgumentException(MIN_PLAYER_NUM + "명 이상은 플레이 해야합니다.");
         }
 
         if (isDuplicateName(names)) {
@@ -21,7 +22,7 @@ public class Players {
     }
 
     static boolean isValidPlayerNum(List<PlayerName> names) {
-        return names.size() > 0;
+        return names.size() > MIN_PLAYER_NUM;
     }
 
     static boolean isDuplicateName(List<PlayerName> names) {
