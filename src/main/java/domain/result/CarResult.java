@@ -11,7 +11,7 @@ public class CarResult implements Comparable<CarResult> {
         this.position = position;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
@@ -23,7 +23,7 @@ public class CarResult implements Comparable<CarResult> {
         return builder.toString();
     }
 
-    public boolean isMatchMaxPosition(int maxPosition) {
+    boolean isMatchMaxPosition(int maxPosition) {
         return position == maxPosition;
     }
 
@@ -45,7 +45,7 @@ public class CarResult implements Comparable<CarResult> {
         return otherResult.position - this.position;
     }
 
-    public int getPosition() {
+    int getPosition() {
         return position;
     }
 }

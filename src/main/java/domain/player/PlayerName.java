@@ -17,7 +17,7 @@ public class PlayerName {
         return name != null && name.length() >= MIN_LENGTH;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 

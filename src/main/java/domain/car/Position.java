@@ -13,7 +13,7 @@ class Position {
         return position;
     }
 
-    public CarResult getResult(String name) {
+    CarResult getResult(String name) {
         return new CarResult(name, position);
     }
 }
